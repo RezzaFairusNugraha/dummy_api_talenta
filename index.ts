@@ -1112,7 +1112,12 @@ app.get("/docs", scalarMiddleware);
 
 const port = Number(process.env.PORT || 3000);
 
+console.log(`🚀 Server berjalan di: http://localhost:${port}`);
+console.log(`📖 Dokumentasi API (Scalar UI): http://localhost:${port}/docs`);
+console.log(`📄 OpenAPI JSON: http://localhost:${port}/openapi.json`);
+
 export default {
   port,
+  hostname: "0.0.0.0",
   fetch: app.fetch,
 };
